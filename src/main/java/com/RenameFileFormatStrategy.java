@@ -10,7 +10,7 @@ public class RenameFileFormatStrategy implements FormatStrategy {
     @Override
     public void format(ArrayList<Assignment> newAssignmentFiles, ArrayList<Student> newStudentList, int x, int j,File directory) throws IOException {
                     newStudentList.get(x).setSubmitted(true);
-                    String formattedName="src/main/java/com/filesToRename/renamedFiles/"+newStudentList.get(j).getFullName()+"_"+newStudentList.get(j).getIdentifier()+"_"+"assignsubmission_file_"+newAssignmentFiles.get(x).getName();
+                    String formattedName="src/main/java/com/filesToRename/renamedFiles/"+newStudentList.get(j).getFullName()+ "_" +newStudentList.get(j).getIdentifier()+"_"+"assignsubmission_file_"+newAssignmentFiles.get(x).getName();
                     File[] fileList = directory.listFiles();
                     int flag = 0; 
                     for (int n = 0; n < fileList.length; n++) {
