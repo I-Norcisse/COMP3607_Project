@@ -8,9 +8,9 @@ import java.io.FileWriter;
 public class ProjectFiles 
 {
     private ArrayList<String>missingStudentsList= new ArrayList<String>();
-    private ArrayList<Object> studentList=new ArrayList<Object>();
-    private ArrayList<Object> assignmentList=new ArrayList<Object>();
-    private ArrayList<Student> newStudentList=new ArrayList<Student>();
+    private ArrayList<Object> studentList= new ArrayList<Object>();
+    private ArrayList<Object> assignmentList= new ArrayList<Object>();
+    private ArrayList<Student> newStudentList= new ArrayList<Student>();
     private ArrayList<Assignment> newAssignmentList= new ArrayList<Assignment>();
     private Formatter F=new Formatter();
     
@@ -23,13 +23,13 @@ public class ProjectFiles
     public void getStudents()throws Exception{
         FileSearch  csvFile= new CSV();
         studentList=csvFile.extract((ArrayList<Object>)studentList);
-        newStudentList=(ArrayList<Student>)(Object)studentList;// casting from a Object type to Student 
+        newStudentList=(ArrayList<Student>)(Object)studentList; // casting from a Object type to Student 
     }
     
     public void getAssignments()throws Exception{ 
         AssignmentFile assignmentFileList= new AssignmentFile ();
         assignmentList=assignmentFileList.extract(assignmentList); 
-        newAssignmentList=(ArrayList<Assignment>)(Object)assignmentList;// casting from a Object type to Assignment 
+        newAssignmentList=(ArrayList<Assignment>)(Object)assignmentList; // casting from a Object type to Assignment 
     }
     
     public void getFormat(){
@@ -61,7 +61,7 @@ public class ProjectFiles
         writer.close();
     }
     catch(IOException e){
-        System.out.println("Unable to Write to Missing Students File");
+        System.out.println("Unable to Write to Missing Students File") ;
     }
     }
 }
